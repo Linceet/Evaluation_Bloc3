@@ -43,3 +43,6 @@ jobs:
 
       - name: run semgrep
         run: npx semgrep --config=./semgrep-rules/ --exclude node_modules/ --exclude dist/
+
+      - name: run security audit
+        run: npm audit --audit-level=high
