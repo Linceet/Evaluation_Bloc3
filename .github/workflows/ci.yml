@@ -27,7 +27,9 @@ jobs:
         run: pip install semgrep
       
       - name: install gitleaks
-        run: pip install gitleaks-py
+        run: wget https://github.com/gitleaks/gitleaks/releases/download/v8.30.0/gitleaks_8.30.0_linux_x64.tar.gz
+        run: tar -xvf gitleaks_8.30.0_linux_x64.tar.gz
+        run: mv gitleaks /usr/local/bin/
 
       - name: Run linter
         run: npm run lint
