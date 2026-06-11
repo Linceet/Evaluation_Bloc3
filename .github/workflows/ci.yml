@@ -25,6 +25,9 @@ jobs:
 
       - name: intall semgrep
         run: pip install semgrep
+      
+      - name: install gitleaks
+        run: pip install gitleaks-py
 
       - name: Run linter
         run: npm run lint
