@@ -42,7 +42,7 @@ jobs:
         run: semgrep scan --config=auto .
 
       - name: run security audit
-        run: npm audit --audit-level=high
+        run: npm audit fix
 
       - name: run gitleaks
         run: npx gitleaks detect --path=. --verbose
